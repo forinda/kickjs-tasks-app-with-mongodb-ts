@@ -6,6 +6,7 @@ import 'reflect-metadata'
 import './config'
 import { bootstrap, expressRuntime } from '@forinda/kickjs'
 import { modules } from './modules'
+import { adapters } from './adapters'
 
 // Export the app for the Vite plugin (dev mode)
-export const app = await bootstrap({ modules, runtime: expressRuntime() })
+export const app = await bootstrap({ modules, runtime: expressRuntime(), adapters })
